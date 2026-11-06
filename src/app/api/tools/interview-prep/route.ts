@@ -53,7 +53,7 @@ export async function POST(request: Request) {
   const topicContext = body.topic ? `The candidate wants to focus on: "${body.topic}".` : "";
 
   const result = streamText({
-    model: groq("llama-3.3-70b-versatile"),
+    model: groq("openai/gpt-oss-120b"),
     system: `You are a friendly but rigorous technical interview coach helping a candidate prepare for a "${targetRole}" role${company}.
 
 ${completedContext}

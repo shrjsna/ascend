@@ -15,7 +15,7 @@ export async function generateRoadmap(
     : "";
 
   const { text } = await generateText({
-    model: groq("llama-3.3-70b-versatile"),
+    model: groq("openai/gpt-oss-120b"),
     prompt: `You are a senior engineering career coach. Return ONLY valid JSON, no markdown, no explanation.
 
 Build a career roadmap for: "${currentRole}" → "${targetRole}"

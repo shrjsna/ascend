@@ -40,7 +40,7 @@ export async function POST(request: Request) {
     : "No roadmap available.";
 
   const result = streamText({
-    model: groq("llama-3.3-70b-versatile"),
+    model: groq("openai/gpt-oss-120b"),
     system: `You are a senior technical recruiter helping candidates understand how ready they are for specific job postings.`,
     prompt: `Here is the job description:
 ---

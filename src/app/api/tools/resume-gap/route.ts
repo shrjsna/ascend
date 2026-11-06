@@ -28,7 +28,7 @@ export async function POST(request: Request) {
   const company = profile?.company ? ` at ${profile.company}` : "";
 
   const result = streamText({
-    model: groq("llama-3.3-70b-versatile"),
+    model: groq("openai/gpt-oss-120b"),
     system: `You are a senior technical recruiter and career coach. Analyse resumes and give honest, actionable gap analysis.`,
     prompt: `The candidate wants to become a "${targetRole}"${company}.
 
